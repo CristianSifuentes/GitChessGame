@@ -1,17 +1,11 @@
-# killer3 en la rama 'pieces'
-class Piece:
-    def __init__(self, color, position):
-        self.color = color
-        self.position = position
+# killer2 en la rama 'board'
+class ChessBoard:
+    def __init__(self):
+        self.grid = self.create_board()
 
-    def move(self, new_position):
-        self.position = new_position
-        print(f"Piece moved to {new_position}")
+    def create_board(self):
+        return [["" for _ in range(8)] for _ in range(8)]
 
-class Rook(Piece):
-    def __init__(self, color, position):
-        super().__init__(color, position)
-
-    def move(self, new_position):
-        # Validate rook's movement
-        super().move(new_position)
+    def display_board(self):
+        for row in self.grid:
+            print(row)
