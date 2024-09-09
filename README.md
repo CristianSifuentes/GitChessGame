@@ -9,14 +9,68 @@ I am going to propose a realistic and detailed scenario of collaborative work in
 
 * Each programmer develops a part of the game (board, pieces, movement logic, and turn control).
 
-* [Try Git](http://try.github.io/levels/1/challenges/1) A 15 minute interactive tutorial to learn the basics. 
-* [Git-it](http://nodeschool.io/#git-it) Interactive software you run from the Terminal (requires installing node.js and nmp).
+* Use of Git for version control, including branches, merge, conflict resolution, and error handling in commits. 
 
-### Purely text based resources
-* [Git: No Deep Sh*t](http://rogerdudler.github.io/git-guide/) A super simplified way of explaining git, basically a cheatsheet.
-* [The Git Book](http://git-scm.com/book) Explains everything that's possible with git in lots and lots of detail.
+### Step 1: Repository Initialization
 
 
+killer1 creates a repository in Git and uploads a basic structure.
+
+```bash 
+# killer1
+git init chess-game
+cd chess-game
+touch README.md main.py
+git add README.md main.py
+git commit -m "Initial commit with basic structure"
+git remote add origin https://github.com/killer1/chess-game.git
+git push -u origin master
+
+```
+
+### Step 2: Creating branches for each part of the project
+
+Each programmer has his branch. killer1 creates the branches and assigns tasks:
+
+
+* killer1: Create the game controller.
+* killer2: Deploy the dashboard.
+* killer3: Implement the pieces.
+* killer4: Manage the rules and the game turn.
+
+```bash 
+# killer1
+git branch controller
+git branch board
+git branch pieces
+git branch rules
+git push origin controller board pieces rules
+```
+
+### Step 3: Development of each programmer
+
+killer1 works in game controller:
+
+```python 
+# killer1 en la rama 'controller'
+class GameController:
+    def __init__(self):
+        self.board = None
+        self.players = []
+
+    def start_game(self):
+        self.board = ChessBoard()
+        self.players = [Player("White"), Player("Black")]
+        print("Game started!")
+
+```
+```python 
+git checkout controller
+git add main.py
+git commit -m "Game controller class with start_game method"
+git push origin controller
+
+```
 The Git Flow
 ==================
 
