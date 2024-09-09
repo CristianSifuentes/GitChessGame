@@ -1,12 +1,14 @@
-Getting Started With Git and GitHub
+Git Chess Game
 ===================================
 
-Explaining Git and GitHub. Forked from [Jaime Kosoy](https://github.com/jkosoy). The following commands below are to be run in the Terminal.App for Mac OSX or Linux. For a good overview on how to use the Terminal see [this tutorial](http://cli.learncodethehardway.org/book/). There is also a [desktop application](desktop application) for GitHub if you'd prefer to not use the Terminal.App.
+I am going to propose a realistic and detailed scenario of collaborative work in a Git project for a chess game in Python, where each programmer (killer1, killer2, killer3 and killer4) contributes. The game code will include advanced programming concepts, such as classes, design patterns (e.g., state pattern), error handling, and efficient data structures.
 
-## Some links for more in depth learning
-### Hands on / interactive learning
-* [Learn Version Control with Git](https://www.git-tower.com/learn/ebook) A website for learning Git. Appears to cost money but has a free html book.
-* [Git Immersion](http://gitimmersion.com/lab_01.html) A website with tutorial materials you download and follow along with.
+## Scenery
+### Project requirements
+* A [ Git repository](https://www.git-tower.com/learn/ebook)  that all programmers work on..
+
+* Each programmer develops a part of the game (board, pieces, movement logic, and turn control).
+
 * [Try Git](http://try.github.io/levels/1/challenges/1) A 15 minute interactive tutorial to learn the basics. 
 * [Git-it](http://nodeschool.io/#git-it) Interactive software you run from the Terminal (requires installing node.js and nmp).
 
