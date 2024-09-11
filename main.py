@@ -28,6 +28,7 @@ class Piece:
         self.position = new_position
         print(f"Piece moved to {new_position}")
 
+
 class Rook(Piece):
     def __init__(self, color, position):
         super().__init__(color, position)
