@@ -71,6 +71,54 @@ git commit -m "Game controller class with start_game method"
 git push origin controller
 
 ```
+
+killer 2 works on the Chess Board class in the board branch:
+```python 
+# killer2 en la rama 'board'
+class ChessBoard:
+    def __init__(self):
+        self.grid = self.create_board()
+
+    def create_board(self):
+        return [["" for _ in range(8)] for _ in range(8)]
+
+    def display_board(self):
+        for row in self.grid:
+            print(row)
+
+
+```
+
+```python 
+git checkout board
+git add main.py
+git commit -m "ChessBoard class with create_board and display_board methods"
+git push origin board
+
+
+```
+
+killer4 manages the game rules in the rules branch:
+
+```python 
+# killer4 en la rama 'rules'
+class TurnManager:
+    def __init__(self):
+        self.turn = 0
+
+    def next_turn(self):
+        self.turn += 1
+        print(f"Turn {self.turn}: Now it's {'White' if self.turn % 2 == 1 else 'Black'}'s turn")
+
+```
+
+```python 
+git checkout rules
+git add main.py
+git commit -m "TurnManager class with next_turn method"
+git push origin rules
+```
+
 The Git Flow
 ==================
 
