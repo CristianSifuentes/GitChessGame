@@ -64,7 +64,7 @@ class GameController:
         print("Game started!")
 
 ```
-```python 
+```bash 
 git checkout controller
 git add main.py
 git commit -m "Game controller class with start_game method"
@@ -89,7 +89,7 @@ class ChessBoard:
 
 ```
 
-```python 
+```bash 
 git checkout board
 git add main.py
 git commit -m "ChessBoard class with create_board and display_board methods"
@@ -112,11 +112,53 @@ class TurnManager:
 
 ```
 
-```python 
+```bash 
 git checkout rules
 git add main.py
 git commit -m "TurnManager class with next_turn method"
 git push origin rules
+```
+### Step 4: Integration of the branches
+
+killer1 tries to merge all branches into master to integrate the game.
+
+```bash 
+git checkout master
+git merge controller
+git merge board
+git merge pieces
+git merge rules
+```
+Merge error between killer1 and killer3
+
+While merging pieces, a merge conflict occurs between killer1 and killer3 in main.py:
+
+```bash 
+Auto-merging main.py
+CONFLICT (content): Merge conflict in main.py
+
+```
+killer1 resolves the conflict manually in main.py (for example, by fixing duplicate lines).
+
+```bash 
+git add main.py
+git commit -m "Merge conflict resolved between controller and pieces"
+
+```
+
+### Step 5: Testing and bug fixing
+
+
+All programmers work together to fix bugs, perform tests, and make final adjustments. For example, if killer2 finds an error in the way the board is drawn:
+
+```bash 
+# killer2 corrige un bug en 'ChessBoard'
+git checkout board
+# Actualiza el método display_board
+git add main.py
+git commit -m "Fixed display_board method to properly print the chessboard"
+git push origin board
+
 ```
 
 The Git Flow
