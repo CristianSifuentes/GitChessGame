@@ -222,6 +222,47 @@ git config --global user.email "killer1@example.com"
 
 It is always good practice to work in branches for each new feature or major change, to avoid breaking the code in master.
 
+- Create a new branch to implement a chess move (e.g. the bishop move):
+
+```bash 
+git checkout -b feature-bishop-move
+
+```
+
+- Push this new branch to the remote repository:
+
+
+```bash 
+git push -u origin feature-bishop-move
+
+```
+
+3. Add and commit changes
+
+- Check which files have been modified:
+
+```bash 
+git status
+
+```
+- Add only the files you want to commit (for example, only changes related to the bishop's movement):
+
+```bash 
+git add bishop.py
+```
+
+- Confirm the changes with a clear and descriptive message:
+
+```bash 
+git add bishop.py
+```
+
+If you want to combine several steps (add and confirm at the same time):
+
+```bash 
+git commit -am "Fixed display bug in chessboard and implemented bishop movement"
+
+```
 
 
 A way to think about Git and Github.
