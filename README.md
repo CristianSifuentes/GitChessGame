@@ -161,10 +161,68 @@ git push origin board
 
 ```
 
-The Git Flow
+After fixing the errors, everyone merges their branches back to master, pushing and verifying the final operation.
+
+### Step 6: Using Advanced Git
+
+* Rebase: If killer4 is behind on work and your branch is out of date, you can do a rebase to keep up to date:
+
+```bash 
+git checkout rules
+git rebase master
+
+```
+
+* Stash: If killer1 has to switch branches without losing its current work:
+
+```bash 
+git stash
+git checkout pieces
+
+```
+### Step 7: Project Completion
+When everything is ready, killer1 merges the final branches and tags version 1.0 of the game:
+
+
+```bash 
+git checkout master
+git merge board
+git merge pieces
+git merge rules
+git tag -a v1.0 -m "First release of Chess Game"
+git push origin --tags
+
+```
+
+Advanced commands
+
 ==================
 
-The following snippet is designed to explain Vincent Driessen's [git branching model](http://nvie.com/posts/a-successful-git-branching-model/), at least as well as I understand it. Special thanks to [Stephen Koch](https://twitter.com/skoch) for being the true master here.
+To work collaboratively and efficiently with Git on a project like the Python chess game, you could use more advanced commands that allow you to perform more refined version control, manage large changes, and avoid problems during merges. Here is a list of commands, combinations and variants applied to the chess example, as well as some strategies for their use:
+
+### 1. Cloning and initial configuration of the repository
+
+When working as a team, the first thing is to clone the repository:
+
+
+```bash 
+git clone https://github.com/killer1/chess-game.git
+cd chess-game
+
+```
+Additionally, it is good practice to configure your user in Git (if you haven't already):
+
+```bash 
+git config --global user.name "killer1"
+git config --global user.email "killer1@example.com"
+
+```
+
+2. Working with branches
+
+It is always good practice to work in branches for each new feature or major change, to avoid breaking the code in master.
+
+
 
 A way to think about Git and Github.
 ------------
