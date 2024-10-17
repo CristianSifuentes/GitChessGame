@@ -218,7 +218,7 @@ git config --global user.email "killer1@example.com"
 
 ```
 
-2. Working with branches
+### 2. Working with branches
 
 It is always good practice to work in branches for each new feature or major change, to avoid breaking the code in master.
 
@@ -237,7 +237,10 @@ git push -u origin feature-bishop-move
 
 ```
 
-3. Add and commit changes
+### 3. Add and commit changes
+
+Once you've made changes to the code, you can selectively add and commit them:
+
 
 - Check which files have been modified:
 
@@ -254,13 +257,37 @@ git add bishop.py
 - Confirm the changes with a clear and descriptive message:
 
 ```bash 
-git add bishop.py
+git commit -m "Implemented bishop movement logic"
+
 ```
 
 If you want to combine several steps (add and confirm at the same time):
 
 ```bash 
 git commit -am "Fixed display bug in chessboard and implemented bishop movement"
+```
+
+### 4. Work with other changes (fetch, pull, rebase)
+
+When other developers have made changes to the remote repository, you need to sync your local work with the remote changes:
+
+- Download master changes without automatically merging:
+
+```bash 
+git fetch origin
+```
+
+- Merge remote changes to your current branch:
+
+```bash 
+git merge origin/master
+
+```
+Or, if you prefer to keep a cleaner history without having so many merge commits, you can use rebase:
+
+
+```bash 
+git rebase origin/master
 
 ```
 
