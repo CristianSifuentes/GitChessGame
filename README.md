@@ -324,6 +324,103 @@ Once resolved, you finish the merge:
 ```bash 
 git commit -m "Resolved merge conflict in chess.py"
 
+```
+
+### 6. Stashing temporary save
+
+```bash 
 
 
 ```
+
+```bash 
+
+
+```
+
+### 7. History and review
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+### 8. Revert changes
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+### 9. Cherry-pick (Select changes)
+
+
+```bash 
+
+
+```
+
+
+### 10. Tags and releases
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+Complete Workflow with Valid Plays
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+```bash 
+
+
+```
+
+Conclusion
+
+
+These Git commands, in combination with an organized workflow, are key to collaboration on a project like the game of chess. Using branches, merge, rebase, deconfliction, and stash will allow you to maintain a clean repository, while reviewing commits and using tags help you monitor progress and versions.
