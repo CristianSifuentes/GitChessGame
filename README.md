@@ -297,8 +297,7 @@ This will allow you to apply your commits to remote changes in a more organized 
 git rebase --continue
 
 ```
-5. Resolving merge conflicts
-
+### 5. Resolving merge conflicts
 It's inevitable that conflicts will arise at some point when you work with multiple programmers. If you are merging and a conflict appears:
 
 ```bash 
