@@ -291,6 +291,12 @@ git rebase origin/master
 
 ```
 
+This will allow you to apply your commits to remote changes in a more organized way. If conflicts arise during rebase, you can resolve them, add the resolved file, and then continue with:
+
+```bash 
+git rebase --continue
+
+```
 
 A way to think about Git and Github.
 ------------

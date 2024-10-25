@@ -326,96 +326,158 @@ git commit -m "Resolved merge conflict in chess.py"
 
 ```
 
-### 6. Stashing temporary save
+### 6. Stashing (temporary save)
+If you need to make a quick change to another branch but don't want to lose your current work, you can temporarily save it using git stash:
+
 
 ```bash 
-
-
+git stash
 ```
 
+After working on something else, you can get your job back:
+
+
 ```bash 
-
-
+git stash pop
 ```
 
 ### 7. History and review
+Maintaining a clear history and reviewing changes is essential to understanding the progress of the project:
+
+* View commit history:
 
 ```bash 
+git log
+
+
+```
+* If you prefer a compact view with a graph:
+
+```bash 
+git log --oneline --graph --decorate --all
 
 
 ```
 
+* View changes made to a specific file:
+
 ```bash 
+git diff HEAD~1 bishop.py
 
 
 ```
 
-```bash 
-
-
-```
+* Compare two different branches (en.master with feature-bishop-move):
 
 ```bash 
 
+git diff master..feature-bishop-move
 
 ```
 
 ### 8. Revert changes
 
+If you accidentally committed a mistake, you can undo it:
+
+* Undo the last commit (if you have not done a push):
+
 ```bash 
+git reset --soft HEAD~1
 
 
 ```
 
+* If you have already done a push, you can revert a commit without losing the history:
+
 ```bash 
+git revert <commit_hash>
 
 
 ```
 
 ### 9. Cherry-pick (Select changes)
 
+If you want to apply a specific commit from one branch to another without merging all the content, you can use cherry-pick:
 
 ```bash 
+git checkout master
+git cherry-pick <commit_hash>
 
 
 ```
 
 
 ### 10. Tags and releases
+When the project is ready to be released, you can tag a specific version:
+
+* Create a label:
 
 ```bash 
+git tag -a v1.0 -m "Version 1.0 with basic chess movement"
 
 
 ```
 
+* Push the tag to the remote repository:
+
+
 ```bash 
-
-
+git push origin v1.0
 ```
 
 Complete Workflow with Valid Plays
 
+Let's assume that the project has progressed to having valid chess moves (for example, bishop, rook, and knight moves). Imagine that killer1 is working on a bug related to horse movement.
+
+ 
+1. Create a branch for the bugfix:
+
 ```bash 
+git checkout -b bugfix-knight-movement
 
 
 ```
 
-```bash 
+2. Modify the horse code:
+
+
+```python 
+class Knight(Piece):
+    def move(self, new_position):
+        # Implementar lógica de movimiento en L
+        if is_valid_knight_move(self.position, new_position):
+            super().move(new_position)
+        else:
+            raise ValueError("Movimiento inválido para el caballo")
 
 
 ```
 
+3. Add and confirm the change:
+
+
 ```bash 
+git add knight.py
+git commit -m "Fixed bug in knight movement logic"
 
 
 ```
 
+4. Merge changes with master:
+
+
+
 ```bash 
+git checkout master
+git pull origin master
+git merge bugfix-knight-movement
 
 
 ```
+5. Empujar los cambios:
 
 ```bash 
+git push origin master
 
 
 ```
